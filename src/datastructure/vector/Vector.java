@@ -48,6 +48,17 @@ public class Vector {
         return false;
     }
 
+    public String busca(int posicao) {
+//        Expressao negada
+//        Caso a posição NÃO for menor ou igual a 0 E NÃO for menor que o tamanho
+        if (!(posicao >= 0 && posicao < tamanho)) {
+//            Jogar uma Exception com o argumento
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+//        Se não retornar o elemento na posição desejada
+        return elementos[posicao];
+    }
+
     public int tamanho() {
         return this.tamanho;
     }
